@@ -8,7 +8,7 @@ class ghost : public character
 {
 private:
 	bool Bouger;
-	pacman* p;
+	pacman p;
 public:
 	ghost(string ,string ,int , int , pacman );
 	~ghost();
