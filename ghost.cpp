@@ -5,12 +5,13 @@
 #include<iostream>
 using namespace std;
 
-ghost::ghost(string a,string b ,int c, int d, pacman p): character(a,b)
+ghost::ghost(string a,string b ,int c, int d, pacman pac): character(a,b)
 {
     X=c;
     Y=d;
     Xold=X;
     Yold=Y;
+    p=pac;
 
 }
 ghost::~ghost()
@@ -53,7 +54,7 @@ bool ghost::BougerRandom(int random)
 {
 	Bouger = false;
 
-	//Pour le bas de la cage fermé - Ne pas aller se promener dedans
+	//Pour le bas de la cage fermÃ© - Ne pas aller se promener dedans
 	if (Y== 9 && X == 9 && !Bouger)
 	{
 		Y-= 1;
@@ -89,13 +90,13 @@ bool ghost::BougerSuivre(int random)
 		Bouger = true;
 	}
 
-	if (Tableau[X][Y-1] != M && Y > p->GetY() && Bouger)
+	if (Tableau[X][Y-1] != M && Y > p.GetY() && Bouger)
 	{
 		Bouger = BougerHaut();
 	}
-	else if (Tableau[X][Y+1] != M && Y < p->GetY() && Bouger)
+	else if (Tableau[X][Y+1] != M && Y < p.GetY() && Bouger)
 	{
-		if(X > p->GetX())
+		if(X > p.GetX())
 		{
 			Bouger = BougerGauche();
 		}
@@ -104,11 +105,11 @@ bool ghost::BougerSuivre(int random)
 			Bouger = BougerDroite();
 		}
 	}
-	else if (Tableau[X-1][Y] != M && X > p->GetX() && Bouger)
+	else if (Tableau[X-1][Y] != M && X > p.GetX() && Bouger)
 	{
 		Bouger = BougerGauche();
 	}
-	else if (Tableau[Y][X+1] != M && X < p->GetX() && Bouger)
+	else if (Tableau[Y][X+1] != M && X < p.GetX() && Bouger)
 	{
 		Bouger = BougerDroite();
 	}
@@ -126,31 +127,31 @@ bool ghost::BougerFuite(int random)
 {
 	Bouger = false;
 
-	//Pour le bas de la cage fermé - Ne pas aller se promener dedans
+	//Pour le bas de la cage fermÃ© - Ne pas aller se promener dedans
 	if (Y == 9 && X == 9 && Bouger)
 	{
 		Y -= 1;
 		Bouger = true;
 	}
 
-	if (Tableau[X][Y-1] != M && Y < p->GetY() && Bouger)
+	if (Tableau[X][Y-1] != M && Y < p.GetY() && Bouger)
 	{
 		Bouger = BougerHaut();
 	}
-	else if (Tableau[X][Y+1] != M && Y > p->GetY() && Bouger)
+	else if (Tableau[X][Y+1] != M && Y > p.GetY() && Bouger)
 	{
         Bouger = BougerRandom(random);
 		Bouger = BougerCommun(random, Bouger);
 	}
-	else if (Tableau[X-1][Y] != M && X < p->GetX() && Bouger)
+	else if (Tableau[X-1][Y] != M && X < p.GetX() && Bouger)
 	{
 		Bouger = BougerGauche();
 	}
-	else if (Tableau[X+1][Y] != M && X > p->GetX() && Bouger)
+	else if (Tableau[X+1][Y] != M && X > p.GetX() && Bouger)
 	{
 		Bouger = BougerDroite();
 	}
-	//Ça pass encore marché, alors en s'en remet au random
+	//Ã‡a pass encore marchÃ©, alors en s'en remet au random
 	else if (Tableau[X][Y-1] != M && random == 0 && Bouger)
 	{
 		Bouger = BougerHaut();
