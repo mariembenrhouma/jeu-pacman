@@ -1,0 +1,80 @@
+# depslib dependency file v1.0
+1618175290 source:c:\users\wassi.desktop-qos557e\desktop\c++\pacman\main.cpp
+	<iostream>
+
+1618174937 source:c:\users\wassi.desktop-qos557e\desktop\c++\pacman\character.cpp
+	"character.h"
+
+1618174937 c:\users\wassi.desktop-qos557e\desktop\c++\pacman\character.h
+	<string>
+
+1618175772 source:c:\users\wassi.desktop-qos557e\desktop\c++\pacman\pacman.cpp
+	"constantes.h"
+	"character.h"
+	"pacman.h"
+	"coin.h"
+
+1618175764 c:\users\wassi.desktop-qos557e\desktop\c++\pacman\constantes.h
+
+1618175188 c:\users\wassi.desktop-qos557e\desktop\c++\pacman\pacman.h
+	"character.h"
+
+1618176098 source:c:\users\wassi.desktop-qos557e\desktop\c++\pacman\coin.cpp
+	"coin.h"
+
+1618176098 c:\users\wassi.desktop-qos557e\desktop\c++\pacman\coin.h
+
+1618249236 source:c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\character.cpp
+	"character.h"
+
+1618249236 c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\character.h
+	<string>
+
+1618176098 source:c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\coin.cpp
+	"coin.h"
+
+1618176098 c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\coin.h
+
+1618248689 source:c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\main.cpp
+	<iostream>
+
+1618177154 source:c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\ghost.cpp
+
+1618249236 source:c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\pacman.cpp
+	"constantes.h"
+	"character.h"
+	"pacman.h"
+	"coin.h"
+	"ghost.h"
+
+1618249428 c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\constantes.h
+
+1618248885 c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\pacman.h
+	"character.h"
+
+1618249401 c:\users\wassi.desktop-qos557e\desktop\c++\jeux pacman\ghost.h
+	"character.h"
+
+1618216836 source:c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\character.cpp
+	"character.h"
+
+1618216836 c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\character.h
+	<string>
+
+1618216288 source:c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\main.cpp
+	<iostream>
+
+1618218094 source:c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\pacman.cpp
+	"constantes.h"
+	"character.h"
+	"pacman.h"
+	"ghost.h"
+
+1618217028 c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\constantes.h
+
+1618253646 c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\pacman.h
+	"character.h"
+
+1618257363 c:\users\user\desktop\jeux pacman-20210412t182127z-001\jeux pacman\ghost.h
+	"character.h"
+
