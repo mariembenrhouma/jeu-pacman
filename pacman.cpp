@@ -12,6 +12,15 @@ pacman::pacman(string a,string b,int c,int d):character(a,b)
     score=0;
     soul=4;
 }
+pacman::pacman(pacman const & p) // il genere une erreur( error: no matching function for call to character)
+{
+    name = p.name;
+    color =p.color;
+    X=p.X;
+    Y=p.Y;
+    Xold= p.Xold;
+    Yold = p.Yold;
+}	
 void pacman::gift()
 {
     if (score%10000==0)
