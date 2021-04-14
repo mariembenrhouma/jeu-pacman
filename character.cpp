@@ -5,15 +5,6 @@ character::character(string a, string b)
 	name = a;
 	color = b;
 }
-character::character(string a ,string b ,int c, int d )
-{
-    name = a;
-	color = b;
-	Xold=c;
-	Yold=d;
-	X=Xold;
-	Y=Yold;
-}
 
 bool character::BougerHaut()
 {
