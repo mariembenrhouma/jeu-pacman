@@ -1,17 +1,15 @@
 #ifndef CONSTANTES_H_INCLUDED
 #define CONSTANTES_H_INCLUDED
 
-//Déclarations de constantes requises pour le jeu
+//DÃ©clarations de constantes requises pour le jeu
 const int Largeur = 19;
 const int Hauteur = 21;
-const int NbPixelsParCase = 16;
 //nos propres constantes
 const int VitesseFantome = 10;
-const int MurMince = 4;
 
 const int TEMPS_FUITE = 150;
 
-//Énumération pour représenter une case du labyrinthe
+//Ã‰numÃ©ration pour reprÃ©senter une case du labyrinthe
 //V=Vide, M=Mur, P=Pastille ,SP=Super Pastille
 enum Objet {V, M, P=100 ,SP=200};
 
