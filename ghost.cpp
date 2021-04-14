@@ -77,7 +77,7 @@ bool ghost::BougerRandom(int random)
 	{
 		Bouger = BougerDroite();
 	}
-    Bouger = BougerCommun(random, Bouger);
+        Bouger = BougerCommun(random, Bouger);
 	return Bouger;
 }
 
@@ -104,6 +104,7 @@ bool ghost::BougerSuivre(int random)
 		{
 			Bouger = BougerDroite();
 		}
+	        Bouger = BougerBas();
 	}
 	else if (Tableau[X-1][Y] != M && X > p.GetX() && Bouger)
 	{
@@ -115,8 +116,7 @@ bool ghost::BougerSuivre(int random)
 	}
 	else
 	{
-		Bouger = BougerBas();
-        Bouger = BougerCommun(random, Bouger);
+          Bouger = BougerCommun(random, Bouger);
 	}
 
        return Bouger;
@@ -140,7 +140,7 @@ bool ghost::BougerFuite(int random)
 	}
 	else if (Tableau[X][Y+1] != M && Y > p.GetY() && Bouger)
 	{
-        Bouger = BougerRandom(random);
+                Bouger = BougerRandom(random);
 		Bouger = BougerCommun(random, Bouger);
 	}
 	else if (Tableau[X-1][Y] != M && X < p.GetX() && Bouger)
@@ -152,24 +152,8 @@ bool ghost::BougerFuite(int random)
 		Bouger = BougerDroite();
 	}
 	//Ça pass encore marché, alors en s'en remet au random
-	else if (Tableau[X][Y-1] != M && random == 0 && Bouger)
-	{
-		Bouger = BougerHaut();
-	}
-	else if (Tableau[X][Y] != M && random == 1 && Bouger)
-	{
-		Bouger = BougerBas();
-	}
-	else if (Tableau[X-1][Y] != M && random == 2 && Bouger)
-	{
-		Bouger = BougerGauche();
-	}
-	else if (Tableau[X+1][Y] != M && random == 3 && Bouger)
-	{
-		Bouger = BougerDroite();
-	}
-
-	Bouger = BougerCommun(random, Bouger);
+	Bouger = BougerRandom(random);
+        Bouger = BougerCommun(random, Bouger);
 
 	return Bouger;
 }
