@@ -14,7 +14,6 @@ protected:
 
 public:
 	character(string  ,string  );
-	character(string  ,string  ,int , int);
 	~character();
 
 	bool BougerHaut();
